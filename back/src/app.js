@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Rotas
-const index = require(".routes/funcionario-route");
+const index = require("./routes/funcionario-route");
 
 app.use("/", index);
 

@@ -5,14 +5,14 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "Buscar",
-    component: () => import("../views/Buscar.vue")
-  },
-  {
-    path:"/funcionarios",
+    path:"/",
     name:"Funcionarios",
     component: () => import("../views/Funcionarios.vue")
+  },
+  {
+    path: "/buscar",
+    name: "Buscar",
+    component: () => import("../views/Buscar.vue")
   }
   
 ]

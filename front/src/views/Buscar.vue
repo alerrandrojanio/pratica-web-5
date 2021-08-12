@@ -2,22 +2,22 @@
  <div class="campos">
 
           <h4>Mostrar todos os Funcionários</h4>
-            <button @click="TodosFunc()">Todos os Funcionários</button><br /><br />
+            <button @click="TodosFunc">Todos os Funcionários</button><br /><br />
                 <ul>
                     <li v-for="funcionario in todosFuncionarios " :key="funcionario.id">
                         <div class="infor">
                             <p> Id: {{ funcionario.id }}</p>
                             <p>Nome: {{ funcionario.nome }}</p>
                             <p>Cargo: {{ funcionario.cargo }}</p>
-                            <p>Data de Nascimento: {{ funcionario.dataNascimento }}</p>
-                            <p>Data de entrada na empresa: {{ funcionario.dataEtrEmpresa }}</p>
+                            <p>Data de Nascimento: {{ funcionario.dt_nascimento }}</p>
+                            <p>Data de entrada na empresa: {{ funcionario.dt_entrada }}</p>
                         </div>
                     </li>
                 </ul>
 
         <h4>Filtrar Funcionários por Id</h4>
         <p>Id: <input type="text" v-model="id"></p>
-          <button @click="BuscarFuncId()">Funcionários por Id</button><br /><br />
+          <button @click="BuscarFuncId">Funcionários por Id</button><br /><br />
 
           <ul>
             <li>
@@ -25,15 +25,15 @@
                     <p> Id: {{ funcionarioId.id }}</p>
                     <p>Nome: {{ funcionarioId.nome }}</p>
                     <p>Cargo: {{ funcionarioId.cargo }}</p>
-                    <p>Data de Nascimento: {{ funcionarioId.dataNascimento }}</p>
-                    <p>Data de entrada na empresa: {{ funcionarioId.dataEtrEmpresa }}</p>
+                    <p>Data de Nascimento: {{ funcionario.dt_nascimento }}</p>
+                    <p>Data de entrada na empresa: {{ funcionario.dt_entrada }}</p>
                 </div>
             </li>
         </ul>
 
         <h4>Filtrar pelo cargo do Funcionário</h4>
              <p> Cargo: <input type="text" v-model="marca" /><br /></p>
-             <button @click="BuscarFuncCargo()">Buscar funcionário pelo cargo</button><br /><br />
+             <button @click="BuscarFuncCargo">Buscar funcionário pelo cargo</button><br /><br />
 
                 <ul>  
                     <li v-for="funcionario in funCargo " :key="funcionario.id">
@@ -41,15 +41,15 @@
                             <p> Id: {{ funcionario.id }}</p>
                             <p>Nome: {{ funcionario.nome }}</p>
                             <p>Cargo: {{ funcionario.cargo }}</p>
-                            <p>Data de Nascimento: {{ funcionario.dataNascimento }}</p>
-                            <p>Data de entrada na empresa {{ funcionario.dataEtrEmpresa }}</p>
+                            <p>Data de Nascimento: {{ funcionario.dt_nascimento }}</p>
+                            <p>Data de entrada na empresa {{ funcionario.dt_entrada }}</p>
                         </div>
                     </li>
                 </ul>
         
         <h4>Filtrar por quantidade de Funcionários</h4>
             Quantidade: <input type="text" v-model="qtd" /><br /><br /><br>
-             <button @click="BuscarFuncQuant()">Buscar por qtd de funcionários</button><br /><br />
+             <button @click="BuscarFuncQuant">Buscar por qtd de funcionários</button><br /><br />
 
               <ul>
                      <li v-for="funcionario in funcQtd " :key="funcionario.id">
@@ -57,8 +57,8 @@
                             <p> Id: {{ funcionario.id }}</p>
                             <p>Nome: {{ funcionario.nome }}</p>
                             <p>Cargo: {{ funcionario.cargo }}</p>
-                            <p>Data de Nascimento: {{ funcionario.dataNascimento }}</p>
-                            <p>Data de entrada na empresa {{ funcionario.dataEtrEmpresa }}</p>
+                            <p>Data de Nascimento: {{ funcionario.dt_nascimento }}</p>
+                            <p>Data de entrada na empresa: {{ funcionario.dt_entrada }}</p>
                         </div>
                     </li>
                </ul>
@@ -74,14 +74,14 @@ export default {
             id: 0,
             nome: "",
             cargo: "",
-            dataNascimento:"",
-            dataEtrEmpresa:"",
+            dt_nascimento: "",
+            dt_entrada: "",
             qtd:0,
-            todosFuncionarios:[],
-            funcionarioId:[],
-            funCargo:[],
-            funcQtd:[],
-            baseURI:""
+            todosFuncionarios: [],
+            funcionarioId: [],
+            funCargo: [],
+            funcQtd: [],
+            baseURI: "http://localhost:3000"  
         }
     },
 
