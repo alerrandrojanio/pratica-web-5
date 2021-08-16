@@ -7,8 +7,16 @@ exports.get = async (req, res)=>{
     res.json(await funcionarioService.getAll());
 };
 
-exports.getByNome = async (req,res) =>{
-    res.json(await funcionarioService.getByNome(req.query.nome));
+exports.getByCargo = async (req,res) =>{
+    res.json(await funcionarioService.getByCargo(req.query.cargo));
+};
+
+exports.getById = async (req,res) =>{
+    res.json(await funcionarioService.getById(req.query.id));
+};
+
+exports.getByQtd = async (req,res) =>{
+    res.json(await funcionarioService.getByQtd(req.query.qtd));
 };
 
 exports.post = async (req, res) =>{

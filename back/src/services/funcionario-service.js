@@ -9,8 +9,16 @@ class FuncionarioService{
     return funcinarioRepository.findAll();
   }
     
-  getByNome(nome){
-    return funcinarioRepository.findByName(nome);
+  getByCargo(cargo){
+    return funcinarioRepository.findByCargo(cargo);
+  }
+
+  getById(id){
+    return funcinarioRepository.findById(id);
+  }
+
+  getByQtd(qtd){
+    return funcinarioRepository.findByQtd(qtd);
   }
   
   update(id, funcionario){
