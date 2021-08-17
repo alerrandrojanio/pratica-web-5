@@ -8,8 +8,8 @@
            <p> Id: <input type="text" v-model="id" /><br /></p> 
            <p> Nome: <input type="text" v-model="nome" /><br /></p> 
            <p> Cargo: <input type="text" v-model="cargo" /><br /></p>
-           <p> Data de Nascimento: <input type="text" v-model="dt_nascimento" /><br /></p>
-           <p> Data de Entrada: <input type="text" v-model="dt_entrada" /><br /><br></p>
+           <p> Data de Nascimento: <input type="text" v-mask="'##/##/####'" v-model="dt_nascimento" /><br /></p>
+           <p> Data de Entrada: <input type="text" v-mask="'##/##/####'" v-model="dt_entrada" /><br /><br></p>
    </div>
 
   <div class="butaos">
